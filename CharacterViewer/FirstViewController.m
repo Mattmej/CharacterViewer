@@ -44,7 +44,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    cell.backgroundColor = [UIColor blueColor];
+    // Table Testing
+//    NSString *sectionString = [NSString stringWithFormat:@"%li", (long)indexPath.section];
+//    NSString *rowString = [NSString stringWithFormat:@"%li", (long)indexPath.row];
+//    cell.backgroundColor = [UIColor blueColor];
+////    cell.textLabel.text = [NSString stringWithFormat:@"Section %@", sectionString, @"%@Row", rowString];
+//    cell.textLabel.text = [[[@"Section " stringByAppendingString:sectionString] stringByAppendingString:@" Row"] stringByAppendingString:rowString];
     
     
     
