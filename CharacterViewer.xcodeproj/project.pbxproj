@@ -17,6 +17,7 @@
 		C90E8B6521C861E500032258 /* CharacterViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B6421C861E500032258 /* CharacterViewerUITests.swift */; };
 		C944EE6C21CB3F5C00A99E42 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EE6A21CB3F5C00A99E42 /* CollectionViewCell.swift */; };
 		C944EE6D21CB3F5C00A99E42 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C944EE6B21CB3F5C00A99E42 /* CollectionViewCell.xib */; };
+		C944EEE621CC462D00A99E42 /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C944EEE521CC462D00A99E42 /* ServiceManager.m */; };
 		C9C6C98221CAF5C600F29E5B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C6C98121CAF5C600F29E5B /* FirstViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		C90E8B6621C861E500032258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C944EE6A21CB3F5C00A99E42 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C944EE6B21CB3F5C00A99E42 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		C944EEE521CC462D00A99E42 /* ServiceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceManager.m; sourceTree = "<group>"; };
+		C944EEE721CC465400A99E42 /* ServiceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceManager.h; sourceTree = "<group>"; };
 		C9C6C97F21CAF5C600F29E5B /* CharacterViewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CharacterViewer-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9C6C98021CAF5C600F29E5B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		C9C6C98121CAF5C600F29E5B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 		C90E8B4021C861E300032258 /* CharacterViewer */ = {
 			isa = PBXGroup;
 			children = (
+				C944EE6E21CB419D00A99E42 /* Manager */,
 				C944EE6821CB3D9C00A99E42 /* ViewController */,
 				C9C6C98321CAF66000F29E5B /* Models */,
 				C90E8B4121C861E300032258 /* AppDelegate.swift */,
@@ -148,6 +152,15 @@
 				C944EE6B21CB3F5C00A99E42 /* CollectionViewCell.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C944EE6E21CB419D00A99E42 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C944EEE721CC465400A99E42 /* ServiceManager.h */,
+				C944EEE521CC462D00A99E42 /* ServiceManager.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		C9C6C98321CAF66000F29E5B /* Models */ = {
@@ -293,6 +306,7 @@
 				C944EE6C21CB3F5C00A99E42 /* CollectionViewCell.swift in Sources */,
 				C90E8B4421C861E300032258 /* SecondViewController.swift in Sources */,
 				C90E8B4221C861E300032258 /* AppDelegate.swift in Sources */,
+				C944EEE621CC462D00A99E42 /* ServiceManager.m in Sources */,
 				C90E8B4A21C861E300032258 /* CharacterViewer.xcdatamodeld in Sources */,
 				C9C6C98221CAF5C600F29E5B /* FirstViewController.m in Sources */,
 			);
