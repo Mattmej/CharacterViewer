@@ -13,28 +13,15 @@ final class PersistenceManager {
     
     
     // MARK: - Core Data stack
+    /*********************************************************/
     
     lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-         */
-        let container = NSPersistentContainer(name: "CatCollection")
+        
+         //The persistent container for the application.
+        let container = NSPersistentContainer(name: "CharacterViewer")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
@@ -42,18 +29,60 @@ final class PersistenceManager {
     }()
     
     // MARK: - Core Data Saving support
+    /*********************************************************/
+
     
+    // Save the persistent container after it detects a change.
     func saveContext () {
+        
+        // Context will be anything inside the persistent container.
         let context = persistentContainer.viewContext
+        
+        // If there are any changes in the persistent container, then...
         if context.hasChanges {
+            
             do {
+                
+                // Attempt to save the persistent container.
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    
+    // Save a new character into persistence
+    
+    func saveCharacter(characterName: String, imageURL: String, characterDescription: String) {
+        let persistence = persistentContainer.viewContext
+        let character = NSEntityDescription.insertNewObject(forEntityName: "Character", into: persistence)
+        
+        character.setValue(characterName, forKey: "characterName")
+        character.setValue(imageURL, forKey: "characterImageLink")
+        character.setValue(characterDescription, forKey: "characterDescription")
+        
+        do {
+            try persistence.save()
+        } catch let error as NSError {
+            print("Could not save. Error: \(error). Info: \(error.userInfo)")
+        }
+    }
+    
+    func loadCharacter() -> [Character] {
+        var characterArray: [Character] = []
+        
+        let persistence = persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Character")
+        do {
+            characterArray = try persistence.fetch(fetchRequest) as! [Character]
+        } catch let error as NSError {
+            print("Could not fetch. Error: \(error). Info: \(error.userInfo)")
+        }
+        
+        return characterArray
     }
 }

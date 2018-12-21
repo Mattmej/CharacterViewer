@@ -15,6 +15,9 @@ class CharacterViewModel: NSObject {
     // Have an array of characters to display to the tableView
     
     
+    // Have ServiceManager to retrieve JSON
+    
+    
     
     
     
