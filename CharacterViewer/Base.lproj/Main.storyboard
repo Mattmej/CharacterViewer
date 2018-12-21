@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,6 +29,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eMB-Ma-CFR" id="alZ-52-Qsa">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCn-uz-qxp">
+                                                    <rect key="frame" x="37" y="24" width="301" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OCn-uz-qxp" firstAttribute="leading" secondItem="alZ-52-Qsa" secondAttribute="leadingMargin" constant="22" id="7h0-uh-8ZT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="OCn-uz-qxp" secondAttribute="bottom" constant="14" id="GCc-ia-PSu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OCn-uz-qxp" secondAttribute="trailing" constant="22" id="GMD-Pe-foQ"/>
+                                                <constraint firstItem="OCn-uz-qxp" firstAttribute="top" secondItem="alZ-52-Qsa" secondAttribute="topMargin" constant="13" id="jef-XU-hpa"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

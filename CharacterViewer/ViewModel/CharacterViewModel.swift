@@ -18,7 +18,7 @@ class CharacterViewModel: NSObject {
     // Have ServiceManager to retrieve JSON
     
     
-    
+    // Parse JSON
     
     
     
