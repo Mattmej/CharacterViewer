@@ -30,18 +30,7 @@ class CharacterViewModel: NSObject {
     
     // MARK: - Parse JSON
     /**************************************************/
-    
-//    -(void)parseJSON {
-//    [self getJSON:^(NSDictionary *jsonDict) {
-//        NSArray *relatedTopics = jsonDict[@"RelatedTopics"];
-//    
-//        for (NSDictionary *dict in relatedTopics) {
-//            NSString *name = [dict[@"Text"] componentsSeparatedByString:@" - "].firstObject;
-//            NSString *description = [dict[@"Text"] componentsSeparatedByString:@" - "].lastObject;
-//    
-//        }
-//    }]
-//    }
+
     
 
     func performRequestTo(url urlString: String, onSuccess: @escaping SuccessfulResponse) {

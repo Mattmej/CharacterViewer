@@ -9,7 +9,8 @@
 import Foundation
 import CoreData
 
-final class PersistenceManager {
+@objcMembers
+final class PersistenceManager: NSObject {
     
     
     // MARK: - Core Data stack

@@ -7,9 +7,15 @@
 //
 
 #import "FirstViewController.h"
+#import "CharacterViewer-Swift.h"
+#import "ServiceManager.h"
 
 @interface FirstViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) CharacterViewModel *viewModel;
+@property (strong, nonatomic) ServiceManager *serviceManager;
+
+
 
 @end
 
@@ -18,13 +24,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"cell"];
+    
+//    self.viewModel = [[CharacterViewModel alloc] init];
+//    [self.viewModel getJSON:^{
+//        [self.tableView reloadData];
+//    }];
+    
+    self.serviceManager = [[ServiceManager alloc] init];
+    [self.serviceManager getJSON:^{
+        [self.tableView reloadData];
+    }];
+    
+    
+    [self setupTableView];
 
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)setupTableView {
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"cell"];
+
+}
+
+- (void)setupViewModel {
+    self.viewModel = [[CharacterViewModel alloc] init];
+//    [self.viewModel ]
 }
 
 /*
@@ -36,6 +67,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//  MARK: - Set up TableView
+/************************************************/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;
