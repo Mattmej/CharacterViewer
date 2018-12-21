@@ -21,8 +21,6 @@
 		C944EE6C21CB3F5C00A99E42 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EE6A21CB3F5C00A99E42 /* CollectionViewCell.swift */; };
 		C944EE6D21CB3F5C00A99E42 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C944EE6B21CB3F5C00A99E42 /* CollectionViewCell.xib */; };
 		C944EEE621CC462D00A99E42 /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C944EEE521CC462D00A99E42 /* ServiceManager.m */; };
-		C944EEE921CC6A8400A99E42 /* CharacterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEE821CC6A8400A99E42 /* CharacterClass.swift */; };
-		C944EEEB21CC6B8400A99E42 /* CharacterProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEEA21CC6B8400A99E42 /* CharacterProperties.swift */; };
 		C944EEEE21CC6DCE00A99E42 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEED21CC6DCE00A99E42 /* CharacterViewModel.swift */; };
 		C944EEF021CC853300A99E42 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEEF21CC853300A99E42 /* PersistenceManager.swift */; };
 		C944EEF321CC9EF900A99E42 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEF221CC9EF900A99E42 /* CharacterTableViewCell.swift */; };
@@ -379,16 +377,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CharacterViewer/Pods-CharacterViewer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -403,15 +397,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CharacterViewerTests-checkManifestLockResult.txt",
 			);
@@ -425,15 +415,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CharacterViewer-checkManifestLockResult.txt",
 			);
@@ -447,15 +433,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CharacterViewerUITests-checkManifestLockResult.txt",
 			);
@@ -475,12 +457,10 @@
 				C944EEF021CC853300A99E42 /* PersistenceManager.swift in Sources */,
 				C944EEEE21CC6DCE00A99E42 /* CharacterViewModel.swift in Sources */,
 				C90E8B4421C861E300032258 /* SecondViewController.swift in Sources */,
-				C944EEE921CC6A8400A99E42 /* CharacterClass.swift in Sources */,
 				C944EEF321CC9EF900A99E42 /* CharacterTableViewCell.swift in Sources */,
 				C90E8B4221C861E300032258 /* AppDelegate.swift in Sources */,
 				C944EEE621CC462D00A99E42 /* ServiceManager.m in Sources */,
 				C90E8B4A21C861E300032258 /* CharacterViewer.xcdatamodeld in Sources */,
-				C944EEEB21CC6B8400A99E42 /* CharacterProperties.swift in Sources */,
 				C9C6C98221CAF5C600F29E5B /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
