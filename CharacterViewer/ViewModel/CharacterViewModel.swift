@@ -7,13 +7,14 @@
 //
 
 import Foundation
-//import SwiftyJSON
+import SwiftyJSON
 
 // This keyword makes all methods in this class exposed to Objective-C.
 @objcMembers
 class CharacterViewModel: NSObject {
     
     let persistenceManager = PersistenceManager()
+    let serviceManager = ServiceManager()
     
     // Have an array of characters to display to the tableView
     
@@ -37,6 +38,8 @@ class CharacterViewModel: NSObject {
 //        }
 //    }]
 //    }
+    
+
     
     
     // Do later

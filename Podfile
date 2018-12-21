@@ -6,6 +6,8 @@ target 'CharacterViewer' do
   use_frameworks!
 
   # Pods for CharacterViewer
+  pod 'SwiftyJSON', '~> 4.0'
+
 
   target 'CharacterViewerTests' do
     inherit! :search_paths
