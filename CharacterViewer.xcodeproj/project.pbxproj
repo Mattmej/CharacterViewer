@@ -21,6 +21,7 @@
 		C944EEE921CC6A8400A99E42 /* CharacterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEE821CC6A8400A99E42 /* CharacterClass.swift */; };
 		C944EEEB21CC6B8400A99E42 /* CharacterProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEEA21CC6B8400A99E42 /* CharacterProperties.swift */; };
 		C944EEEE21CC6DCE00A99E42 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEED21CC6DCE00A99E42 /* CharacterViewModel.swift */; };
+		C944EEF021CC853300A99E42 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEEF21CC853300A99E42 /* PersistenceManager.swift */; };
 		C9C6C98221CAF5C600F29E5B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C6C98121CAF5C600F29E5B /* FirstViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		C944EEE821CC6A8400A99E42 /* CharacterClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClass.swift; sourceTree = "<group>"; };
 		C944EEEA21CC6B8400A99E42 /* CharacterProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterProperties.swift; sourceTree = "<group>"; };
 		C944EEED21CC6DCE00A99E42 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		C944EEEF21CC853300A99E42 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		C9C6C97F21CAF5C600F29E5B /* CharacterViewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CharacterViewer-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9C6C98021CAF5C600F29E5B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		C9C6C98121CAF5C600F29E5B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				C944EEE721CC465400A99E42 /* ServiceManager.h */,
 				C944EEE521CC462D00A99E42 /* ServiceManager.m */,
+				C944EEEF21CC853300A99E42 /* PersistenceManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C944EE6C21CB3F5C00A99E42 /* CollectionViewCell.swift in Sources */,
+				C944EEF021CC853300A99E42 /* PersistenceManager.swift in Sources */,
 				C944EEEE21CC6DCE00A99E42 /* CharacterViewModel.swift in Sources */,
 				C90E8B4421C861E300032258 /* SecondViewController.swift in Sources */,
 				C944EEE921CC6A8400A99E42 /* CharacterClass.swift in Sources */,

@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+// This keyword makes all methods in this class exposed to Objective-C.
+@objcMembers
+class CharacterViewModel: NSObject {
+    
+    // Have an array of characters to display to the tableView
+    
+    
+    
+    
+    
+    
+}
