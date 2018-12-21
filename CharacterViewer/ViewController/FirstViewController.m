@@ -13,9 +13,6 @@
 @interface FirstViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) CharacterViewModel *viewModel;
-@property (strong, nonatomic) ServiceManager *serviceManager;
-
-
 
 @end
 
@@ -25,17 +22,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    self.viewModel = [[CharacterViewModel alloc] init];
-//    [self.viewModel getJSON:^{
-//        [self.tableView reloadData];
-//    }];
+    
+
     
 //    self.serviceManager = [[ServiceManager alloc] init];
 //    [self.serviceManager getJSON:^{
 //        [self.tableView reloadData];
 //    }];
 //    
-    
+    [self setupViewModel];
     [self setupTableView];
 
 }
@@ -49,13 +44,17 @@
 - (void)setupTableView {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"cell"];
+   //  [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"cell"];
 
 }
 
 - (void)setupViewModel {
-    self.viewModel = [[CharacterViewModel alloc] init];
 //    [self.viewModel ]
+    
+    self.viewModel = [[CharacterViewModel alloc] init];
+    [self.viewModel getJSONWithCompletion:^{
+        [self.tableView reloadData];
+    }];
 }
 
 /*
@@ -76,7 +75,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    CharacterTableViewCell *cell = (CharacterTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
     
     // Table Testing
 //    NSString *sectionString = [NSString stringWithFormat:@"%li", (long)indexPath.section];
@@ -86,7 +86,7 @@
 //    cell.textLabel.text = [[[@"Section " stringByAppendingString:sectionString] stringByAppendingString:@" Row"] stringByAppendingString:rowString];
     
     
-    
+    cell.characterName.text = @"Aardvark";
     return cell;
     
 }

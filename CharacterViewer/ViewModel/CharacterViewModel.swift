@@ -32,25 +32,22 @@ class CharacterViewModel: NSObject {
     /**************************************************/
 
     
-
-    func performRequestTo(url urlString: String, onSuccess: @escaping SuccessfulResponse) {
-        guard let url = URL(string: urlString) else {
-            return
+    func getJSON(completion: SuccessfulResponse) {
+        
+        ServiceManager.shared().getJSON { (jsonDict) in
+            guard let dict = jsonDict as? [String:Any] else { return }
+            
+            print(dict)
+            
+            guard let relatedTopics = dict["RelatedTopics"] as? [[String:Any]] else { return }
+            
+            for topic in relatedTopics {
+                
+            }
         }
         
-        Alamofire.request(url).responseJSON(queue: DispatchQueue.main, options: .mutableLeaves) { response in
-            let json = JSON(rawValue: response.result.value!)!
-            
-            for character in json["RelatedTopics"].arrayValue {
-                let name = String (character["Text"].stringValue.split(separator: "-")[0].split(separator: "(")[0])
-                let imageURL = character["Icon"]["URL"].stringValue
-                let description = String (character["Text"].stringValue.split(separator: "-")[1])
-                
-                self.persistenceManager.saveCharacter(characterName: name, imageURL: imageURL, characterDescription: description)
-            }
-            onSuccess()
-        }
     }
+    
     
     func downloadImageFrom(urlString: String, completion: @escaping (Data) -> ()) {
         let noImageUrl = "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
