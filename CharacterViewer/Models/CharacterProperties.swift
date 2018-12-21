@@ -18,7 +18,7 @@ extension Character {
     
     @NSManaged public var characterName: String?
     @NSManaged public var characterImage: NSData?
-    @NSManaged public var characterImageLink: URL?
+    @NSManaged public var characterImageLink: String?
     @NSManaged public var characterDescription: String?
 
 }

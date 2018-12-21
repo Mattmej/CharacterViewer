@@ -22,6 +22,7 @@
 		C944EEEB21CC6B8400A99E42 /* CharacterProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEEA21CC6B8400A99E42 /* CharacterProperties.swift */; };
 		C944EEEE21CC6DCE00A99E42 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEED21CC6DCE00A99E42 /* CharacterViewModel.swift */; };
 		C944EEF021CC853300A99E42 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEEF21CC853300A99E42 /* PersistenceManager.swift */; };
+		C944EEF321CC9EF900A99E42 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EEF221CC9EF900A99E42 /* CharacterTableViewCell.swift */; };
 		C9C6C98221CAF5C600F29E5B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C6C98121CAF5C600F29E5B /* FirstViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		C944EEEA21CC6B8400A99E42 /* CharacterProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterProperties.swift; sourceTree = "<group>"; };
 		C944EEED21CC6DCE00A99E42 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		C944EEEF21CC853300A99E42 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		C944EEF221CC9EF900A99E42 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		C9C6C97F21CAF5C600F29E5B /* CharacterViewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CharacterViewer-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9C6C98021CAF5C600F29E5B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		C9C6C98121CAF5C600F29E5B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
@@ -158,8 +160,6 @@
 				C9C6C98021CAF5C600F29E5B /* FirstViewController.h */,
 				C9C6C98121CAF5C600F29E5B /* FirstViewController.m */,
 				C90E8B4321C861E300032258 /* SecondViewController.swift */,
-				C944EE6A21CB3F5C00A99E42 /* CollectionViewCell.swift */,
-				C944EE6B21CB3F5C00A99E42 /* CollectionViewCell.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -185,6 +185,9 @@
 		C944EEF121CC9E1900A99E42 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C944EE6A21CB3F5C00A99E42 /* CollectionViewCell.swift */,
+				C944EE6B21CB3F5C00A99E42 /* CollectionViewCell.xib */,
+				C944EEF221CC9EF900A99E42 /* CharacterTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				C944EEEE21CC6DCE00A99E42 /* CharacterViewModel.swift in Sources */,
 				C90E8B4421C861E300032258 /* SecondViewController.swift in Sources */,
 				C944EEE921CC6A8400A99E42 /* CharacterClass.swift in Sources */,
+				C944EEF321CC9EF900A99E42 /* CharacterTableViewCell.swift in Sources */,
 				C90E8B4221C861E300032258 /* AppDelegate.swift in Sources */,
 				C944EEE621CC462D00A99E42 /* ServiceManager.m in Sources */,
 				C90E8B4A21C861E300032258 /* CharacterViewer.xcdatamodeld in Sources */,
