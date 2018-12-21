@@ -7,6 +7,8 @@ target 'CharacterViewer' do
 
   # Pods for CharacterViewer
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'Alamofire', '~> 4.7.3'
+
 
 
   target 'CharacterViewerTests' do

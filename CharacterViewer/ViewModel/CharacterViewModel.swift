@@ -8,13 +8,17 @@
 
 import Foundation
 import SwiftyJSON
+import Alamofire
+
+typealias SuccessfulResponse = () -> ()
+
 
 // This keyword makes all methods in this class exposed to Objective-C.
 @objcMembers
 class CharacterViewModel: NSObject {
     
     let persistenceManager = PersistenceManager()
-    let serviceManager = ServiceManager()
+//    let serviceManager = ServiceManager()
     
     // Have an array of characters to display to the tableView
     
@@ -40,38 +44,50 @@ class CharacterViewModel: NSObject {
 //    }
     
 
-    
-    
-    // Do later
-    func getCharacters(_ completion: @escaping() -> Void) {
-        ServiceManager.shared().getJSON { [weak self] (characterDict) in
+    func performRequestTo(url urlString: String, onSuccess: @escaping SuccessfulResponse) {
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        Alamofire.request(url).responseJSON(queue: DispatchQueue.main, options: .mutableLeaves) { response in
+            let json = JSON(rawValue: response.result.value!)!
             
+            for character in json["RelatedTopics"].arrayValue {
+                let name = String (character["Text"].stringValue.split(separator: "-")[0].split(separator: "(")[0])
+                let imageURL = character["Icon"]["URL"].stringValue
+                let description = String (character["Text"].stringValue.split(separator: "-")[1])
+                
+                self.persistenceManager.saveCharacter(characterName: name, imageURL: imageURL, characterDescription: description)
+            }
+            onSuccess()
         }
     }
     
-//    // parse JSON
-//    func parseJSON(_ dict: [String:Any]) -> [Character] {
-//        guard let relatedTopics = dict["RelatedTopics"] as? [String:Any] else { return [] }
-////        guard relatedTopics.count > 0 else { return[] }
-//
-//        var charDict = [Character]()
-//
-//
-//
-//        for (key, value) in relatedTopics {
-//            let characterName = String(value["Text"].split(separator: "-")[0])
-//            let characterDescription = String(entry["Text"].stringValue.split(separator: "-")[1])
-//            let characterImageURL = entry["Icon"]["URL"].stringValue
-//
-////            let character = self.persistenceManager.save(c)
-//
-//            let character = self.persistenceManager.saveCharacter(characterName: characterName, imageURL: characterImageURL, characterDescription: characterDescription)
-//
-//            charDict.append(character)
-//        }
-//
-//        return charDict
-//    }
+    func downloadImageFrom(urlString: String, completion: @escaping (Data) -> ()) {
+        let noImageUrl = "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+        var stringURL = noImageUrl
+        
+        if !urlString.isEmpty {
+            stringURL = urlString
+        }
+        
+        guard let url = URL(string: stringURL) else {
+            return
+        }
+        
+        Alamofire.request(url).response { (dataResponse) in
+            guard let data = dataResponse.data else {
+                return
+            }
+            completion(data)
+        }
+    }
+    
+    
+    
+    
+    
+
     
     
 }
