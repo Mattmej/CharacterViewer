@@ -30,11 +30,11 @@
 //        [self.tableView reloadData];
 //    }];
     
-    self.serviceManager = [[ServiceManager alloc] init];
-    [self.serviceManager getJSON:^{
-        [self.tableView reloadData];
-    }];
-    
+//    self.serviceManager = [[ServiceManager alloc] init];
+//    [self.serviceManager getJSON:^{
+//        [self.tableView reloadData];
+//    }];
+//    
     
     [self setupTableView];
 
