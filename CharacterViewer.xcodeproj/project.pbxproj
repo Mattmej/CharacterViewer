@@ -16,6 +16,7 @@
 		C90E8B5A21C861E500032258 /* CharacterViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B5921C861E500032258 /* CharacterViewerTests.swift */; };
 		C90E8B6521C861E500032258 /* CharacterViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B6421C861E500032258 /* CharacterViewerUITests.swift */; };
 		C926471A21EF8BF0007A8625 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926471921EF8BF0007A8625 /* FirstViewController.swift */; };
+		C926471C21EF97B9007A8625 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926471B21EF97B9007A8625 /* NetworkController.swift */; };
 		C944EE6C21CB3F5C00A99E42 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EE6A21CB3F5C00A99E42 /* CollectionViewCell.swift */; };
 		C944EE6D21CB3F5C00A99E42 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C944EE6B21CB3F5C00A99E42 /* CollectionViewCell.xib */; };
 		C944EEE621CC462D00A99E42 /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C944EEE521CC462D00A99E42 /* ServiceManager.m */; };
@@ -58,6 +59,7 @@
 		C90E8B6421C861E500032258 /* CharacterViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewerUITests.swift; sourceTree = "<group>"; };
 		C90E8B6621C861E500032258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C926471921EF8BF0007A8625 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C926471B21EF97B9007A8625 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		C944EE6A21CB3F5C00A99E42 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C944EE6B21CB3F5C00A99E42 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		C944EEE521CC462D00A99E42 /* ServiceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceManager.m; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				C9C6C98121CAF5C600F29E5B /* FirstViewController.m */,
 				C926471921EF8BF0007A8625 /* FirstViewController.swift */,
 				C90E8B4321C861E300032258 /* SecondViewController.swift */,
+				C926471B21EF97B9007A8625 /* NetworkController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C926471C21EF97B9007A8625 /* NetworkController.swift in Sources */,
 				C944EE6C21CB3F5C00A99E42 /* CollectionViewCell.swift in Sources */,
 				C944EEF021CC853300A99E42 /* PersistenceManager.swift in Sources */,
 				C944EEEE21CC6DCE00A99E42 /* CharacterViewModel.swift in Sources */,
