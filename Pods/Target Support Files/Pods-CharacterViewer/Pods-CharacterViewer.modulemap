@@ -1,6 +1,0 @@
-framework module Pods_CharacterViewer {
-  umbrella header "Pods-CharacterViewer-umbrella.h"
-
-  export *
-  module * { export * }
-}
