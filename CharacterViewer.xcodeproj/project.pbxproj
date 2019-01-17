@@ -17,6 +17,7 @@
 		C90E8B6521C861E500032258 /* CharacterViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E8B6421C861E500032258 /* CharacterViewerUITests.swift */; };
 		C926471A21EF8BF0007A8625 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926471921EF8BF0007A8625 /* FirstViewController.swift */; };
 		C926471C21EF97B9007A8625 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926471B21EF97B9007A8625 /* NetworkController.swift */; };
+		C926471E21F0054B007A8625 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926471D21F0054B007A8625 /* ServiceManager.swift */; };
 		C944EE6C21CB3F5C00A99E42 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C944EE6A21CB3F5C00A99E42 /* CollectionViewCell.swift */; };
 		C944EE6D21CB3F5C00A99E42 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C944EE6B21CB3F5C00A99E42 /* CollectionViewCell.xib */; };
 		C944EEE621CC462D00A99E42 /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C944EEE521CC462D00A99E42 /* ServiceManager.m */; };
@@ -60,6 +61,7 @@
 		C90E8B6621C861E500032258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C926471921EF8BF0007A8625 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		C926471B21EF97B9007A8625 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		C926471D21F0054B007A8625 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		C944EE6A21CB3F5C00A99E42 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C944EE6B21CB3F5C00A99E42 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		C944EEE521CC462D00A99E42 /* ServiceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceManager.m; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				C944EEE521CC462D00A99E42 /* ServiceManager.m */,
 				C926471B21EF97B9007A8625 /* NetworkController.swift */,
 				C944EEEF21CC853300A99E42 /* PersistenceManager.swift */,
+				C926471D21F0054B007A8625 /* ServiceManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				C944EEE621CC462D00A99E42 /* ServiceManager.m in Sources */,
 				C90E8B4A21C861E300032258 /* CharacterViewer.xcdatamodeld in Sources */,
 				C9C6C98221CAF5C600F29E5B /* FirstViewController.m in Sources */,
+				C926471E21F0054B007A8625 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
