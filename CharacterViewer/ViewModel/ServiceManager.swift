@@ -14,5 +14,5 @@ class ServiceManager {
     // first, we will retrieve all characters.
     static let url = URL(string: "https://api.duckduckgo.com/?q=looney+tunes+characters&format=json")
     
-//    static func getCharacters(completion: @escaping(c))
+    static func getCharacters(completion: @escaping(c))
 }

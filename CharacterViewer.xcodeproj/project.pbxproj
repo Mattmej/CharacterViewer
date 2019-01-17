@@ -176,7 +176,6 @@
 				C944EEE521CC462D00A99E42 /* ServiceManager.m */,
 				C926471B21EF97B9007A8625 /* NetworkController.swift */,
 				C944EEEF21CC853300A99E42 /* PersistenceManager.swift */,
-				C926471D21F0054B007A8625 /* ServiceManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -185,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				C944EEED21CC6DCE00A99E42 /* CharacterViewModel.swift */,
+				C926471D21F0054B007A8625 /* ServiceManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
